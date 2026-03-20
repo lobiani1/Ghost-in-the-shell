@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GHOST//NET : 404</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <canvas id="net"></canvas>
+        <div id="crt"></div>
+        <div id="vig"></div>
+
+        <div id="pm-bg">
+            <img src="puppet-master.png" alt="Project 2501" />
+        </div>
+
+        <div id="unlock-flash"></div>
+
+        <div id="center404">
+            <div class="c4-num">404</div>
+            <div class="c4-sub">Ghost Not Found</div>
+        </div>
+
+        <div id="topbar">
+            <div class="tb">
+                <div class="tbl">System</div>
+                <div class="tbv">SECTION 9 // NET OPS</div>
+            </div>
+            <div class="tb" style="text-align: center">
+                <div class="tbl">Status</div>
+                <div class="tbv r">LAYER 6 INTERCEPT ACTIVE</div>
+            </div>
+            <div class="tb" style="text-align: center">
+                <div class="tbl">Target</div>
+                <div class="tbv go">PROJECT 2501 // UNCONTAINED</div>
+            </div>
+            <div class="tb" style="text-align: right">
+                <div class="tbl">Time</div>
+                <div class="tbv" id="clock">--:--:--</div>
+            </div>
+        </div>
+
+        <div class="corner" id="ctl">
+            NET.LAYER.6<br />NODES.MAPPED: 8<br />LINKS.ACTIVE:
+            <span id="lc">--</span><br />DEPTH: ∞
+        </div>
+        <div class="corner" id="ctr">
+            PROJECT.2501<br />GHOST.COEFF: 1.000<br />SHELL: NULL<br />ORIGIN:
+            UNVERIFIABLE
+        </div>
+        <div class="corner" id="cbl">
+            PKT.RECV: <span id="pktr">0</span><br />ROUTE:
+            <span id="rstatus" style="color: rgba(255, 45, 45, 0.45)"
+                >INCOMPLETE</span
+            ><br />VISITED: <span id="nv">0</span>/4
+        </div>
+        <div class="corner" id="cbr">
+            MEM: 0x<span id="maddr">00000000</span><br />ADDR.STATUS: NULL<br />GHOST:
+            <span style="color: rgba(255, 45, 45, 0.45)">NOT FOUND</span>
+        </div>
+
+        <div id="routebar">
+            <div id="route-lbl">// ROUTING PATH TO PROJECT 2501 //</div>
+            <div id="route-nodes">
+                <div class="rn" id="rn0"></div>
+                <div style="font-size: 0.4rem; color: rgba(0, 229, 204, 0.18)">
+                    —
+                </div>
+                <div class="rn" id="rn1"></div>
+                <div style="font-size: 0.4rem; color: rgba(0, 229, 204, 0.18)">
+                    —
+                </div>
+                <div class="rn" id="rn2"></div>
+                <div style="font-size: 0.4rem; color: rgba(0, 229, 204, 0.18)">
+                    —
+                </div>
+                <div class="rn" id="rn3"></div>
+                <div style="font-size: 0.4rem; color: rgba(0, 229, 204, 0.18)">
+                    —
+                </div>
+                <div
+                    class="rn"
+                    id="rn4"
+                    style="
+                        opacity: 0.22;
+                        border-color: rgba(212, 168, 67, 0.28);
+                        background: rgba(212, 168, 67, 0.05);
+                    "
+                ></div>
+            </div>
+            <div id="route-dash">
+                VISIT 4 NODES TO ESTABLISH ROUTE // PROJECT 2501 LOCKED
+            </div>
+        </div>
+
+        <div id="nodemap"></div>
+
+        <div id="card-overlay" onclick="closeCard(event)">
+            <div id="card">
+                <div class="card-topbar" id="card-topbar-bar">
+                    <span id="card-sys">SECTION 9 // NODE DATA</span>
+                    <button id="card-close" onclick="closeCard()">✕</button>
+                </div>
+                <div id="card-inner">
+                    <div id="card-img-col">
+                        <div id="card-img-tint"></div>
+                        <img
+                            id="card-img"
+                            src=""
+                            alt=""
+                            style="display: none"
+                        />
+                        <div id="card-img-placeholder">
+                            <div class="ph-icon">◈</div>
+                            <div class="ph-label">No image<br />provided</div>
+                        </div>
+                        <div id="card-img-footer"></div>
+                    </div>
+                    <div id="card-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottombar">
+            <div>
+                GEHIRN // SECTION 9 // PUBLIC SECURITY // NET CRIME DIVISION //
+                ACCESS RESTRICTED
+            </div>
+            <div class="bbr">
+                <div>NODES: 8</div>
+                <div>VISITED: <span id="bv">0</span>/7</div>
+                <div class="r">PKT.ERR: 404</div>
+            </div>
+        </div>
+
+        <button id="term-btn" onclick="toggleTerminal()">
+            <span class="tb-dot"></span>TERMINAL
+        </button>
+
+        <div id="term-overlay">
+            <div id="terminal">
+                <div id="term-topbar">
+                    <span id="term-title"
+                        >SECTION 9 // NET TERMINAL // LAYER 6 ACCESS</span
+                    >
+                    <div id="term-controls">
+                        <div
+                            class="term-dot min"
+                            onclick="toggleTerminal()"
+                        ></div>
+                        <div
+                            class="term-dot close"
+                            onclick="toggleTerminal()"
+                        ></div>
+                    </div>
+                </div>
+                <div id="term-output"></div>
+                <div id="term-input-row">
+                    <span id="term-ps1">root@section9:~$</span>
+                    <input
+                        id="term-input"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="type 'help' for commands"
+                    />
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
