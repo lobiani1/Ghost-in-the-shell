@@ -10,7 +10,7 @@ complexity of global data traffic. The page you were looking for does not
 exist. But something that exists without a body noticed your search arriving.
 
 Navigate the classified Section 9 node network to establish a route to
-Layer 6. Four nodes unlock the entity. The terminal runs the whole time.
+Layer 6. Four nodes unlock the entity. 
 
 ## Preview
 
